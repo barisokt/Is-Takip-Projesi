@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40BBD1BA-311C-449B-BB5B-622B3AF8A994}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>is_takip_proje</RootNamespace>
+    <AssemblyName>is_takip_proje</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v22.2.Core, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.2.UI, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v22.2.UI, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.2.Wizard, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.3\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.4.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.4.3\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TblAdmin.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TblCagriDetay.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TblCagrilar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TblDepartmanlar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TblFirmalar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TblGorevDetaylar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TblGorevler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TblPersonel.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\CagriFormlari\AktifCagrilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\CagriFormlari\AktifCagrilar.Designer.cs">
+      <DependentUpon>AktifCagrilar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Departmanİstatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Departmanİstatistik.Designer.cs">
+      <DependentUpon>Departmanİstatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FirmaFormlari\FrmFirmaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FirmaFormlari\FrmFirmaEkle.Designer.cs">
+      <DependentUpon>FrmFirmaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FirmaFormlari\FrmFirmaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FirmaFormlari\FrmFirmaListesi.Designer.cs">
+      <DependentUpon>FrmFirmaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FirmaFormlari\FrmFirmİstatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FirmaFormlari\FrmFirmİstatistik.Designer.cs">
+      <DependentUpon>FrmFirmİstatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmGorevİstatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmGorevİstatistik.Designer.cs">
+      <DependentUpon>FrmGorevİstatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\GörevFormları\AktifGorevler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\GörevFormları\AktifGorevler.Designer.cs">
+      <DependentUpon>AktifGorevler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmAnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmAnaForm.Designer.cs">
+      <DependentUpon>FrmAnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\CagriFormlari\FrmCagriAtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\CagriFormlari\FrmCagriAtama.Designer.cs">
+      <DependentUpon>FrmCagriAtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmDepartmanlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmDepartmanlar.Designer.cs">
+      <DependentUpon>FrmDepartmanlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\GörevFormları\FrmGorevDetaylar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\GörevFormları\FrmGorevDetaylar.Designer.cs">
+      <DependentUpon>FrmGorevDetaylar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\GörevFormları\FrmGörev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\GörevFormları\FrmGörev.Designer.cs">
+      <DependentUpon>FrmGörev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\GörevFormları\FrmGörevListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\GörevFormları\FrmGörevListesi.Designer.cs">
+      <DependentUpon>FrmGörevListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\PersonelFormları\FrmPersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\PersonelFormları\FrmPersonelEkle.Designer.cs">
+      <DependentUpon>FrmPersonelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\PersonelFormları\FrmPersoneller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\PersonelFormları\FrmPersoneller.Designer.cs">
+      <DependentUpon>FrmPersoneller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\PersonelFormları\FrmPersonelİstatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\PersonelFormları\FrmPersonelİstatistik.Designer.cs">
+      <DependentUpon>FrmPersonelİstatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\PersonelFormları\SilinmisPersoneller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\PersonelFormları\SilinmisPersoneller.Designer.cs">
+      <DependentUpon>SilinmisPersoneller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\GörevFormları\TamamlananGorevler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\GörevFormları\TamamlananGorevler.Designer.cs">
+      <DependentUpon>TamamlananGorevler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\CagriFormlari\TamamlanmisCagrilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\CagriFormlari\TamamlanmisCagrilar.Designer.cs">
+      <DependentUpon>TamamlanmisCagrilar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGorevFormlari\FrmAktifGörevler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGorevFormlari\FrmAktifGörevler.Designer.cs">
+      <DependentUpon>FrmAktifGörevler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGorevFormlari\FrmCagriDetayGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGorevFormlari\FrmCagriDetayGirisi.Designer.cs">
+      <DependentUpon>FrmCagriDetayGirisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGorevFormlari\FrmCagriListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGorevFormlari\FrmCagriListesi.Designer.cs">
+      <DependentUpon>FrmCagriListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGorevFormlari\FrmPersonelFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGorevFormlari\FrmPersonelFormu.Designer.cs">
+      <DependentUpon>FrmPersonelFormu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGorevFormlari\FrmTamamlanmisGorevler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGorevFormlari\FrmTamamlanmisGorevler.Designer.cs">
+      <DependentUpon>FrmTamamlanmisGorevler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\CagriFormlari\AktifCagrilar.resx">
+      <DependentUpon>AktifCagrilar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Departmanİstatistik.resx">
+      <DependentUpon>Departmanİstatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FirmaFormlari\FrmFirmaEkle.resx">
+      <DependentUpon>FrmFirmaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FirmaFormlari\FrmFirmaListesi.resx">
+      <DependentUpon>FrmFirmaListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FirmaFormlari\FrmFirmİstatistik.resx">
+      <DependentUpon>FrmFirmİstatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmGorevİstatistik.resx">
+      <DependentUpon>FrmGorevİstatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\GörevFormları\AktifGorevler.resx">
+      <DependentUpon>AktifGorevler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmAnaForm.resx">
+      <DependentUpon>FrmAnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\CagriFormlari\FrmCagriAtama.resx">
+      <DependentUpon>FrmCagriAtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmDepartmanlar.resx">
+      <DependentUpon>FrmDepartmanlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\GörevFormları\FrmGorevDetaylar.resx">
+      <DependentUpon>FrmGorevDetaylar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\GörevFormları\FrmGörev.resx">
+      <DependentUpon>FrmGörev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\GörevFormları\FrmGörevListesi.resx">
+      <DependentUpon>FrmGörevListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\PersonelFormları\FrmPersonelEkle.resx">
+      <DependentUpon>FrmPersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\PersonelFormları\FrmPersoneller.resx">
+      <DependentUpon>FrmPersoneller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\PersonelFormları\FrmPersonelİstatistik.resx">
+      <DependentUpon>FrmPersonelİstatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\PersonelFormları\SilinmisPersoneller.resx">
+      <DependentUpon>SilinmisPersoneller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\GörevFormları\TamamlananGorevler.resx">
+      <DependentUpon>TamamlananGorevler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\CagriFormlari\TamamlanmisCagrilar.resx">
+      <DependentUpon>TamamlanmisCagrilar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGorevFormlari\FrmAktifGörevler.resx">
+      <DependentUpon>FrmAktifGörevler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGorevFormlari\FrmCagriDetayGirisi.resx">
+      <DependentUpon>FrmCagriDetayGirisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGorevFormlari\FrmCagriListesi.resx">
+      <DependentUpon>FrmCagriListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGorevFormlari\FrmPersonelFormu.resx">
+      <DependentUpon>FrmPersonelFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGorevFormlari\FrmTamamlanmisGorevler.resx">
+      <DependentUpon>FrmTamamlanmisGorevler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="Entity\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entity\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entity\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Entity\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.3.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.3.min.js" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
